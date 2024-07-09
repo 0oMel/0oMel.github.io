@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+    <head>
+        <title>Mr.Black Remote Service</title>
+    </head>
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            letter-spacing: normal;
+        }
+        .xm{
+            display: table;
+            margin-top: 20px;
+        }
+        .nav{
+            display: block;
+            position: fixed;
+            width: 100dvw;
+            height: 80px;
+            border-bottom: 2px solid blue;
+            background-color: ghostwhite;
+        }
+        #pf{
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            border-radius: 5px;
+        }
+        .mbl{
+            display: none;
+            position: relative;
+            top: 110px;
+            width: 100dvw;
+            background-color: rgb(249, 255, 255);
+            height: 410px;
+        }
+        .lg{
+            float: left;
+            margin-left: 10px;
+            width: 120px;
+            height: 50px;
+            text-align: center;
+            border-radius: 10px;
+            color: white;
+        }
+        .sv{
+            float: left;
+            margin-left: 10px;
+            width: auto;
+            height: 50px;
+            border-radius: 10px;
+        }
+        .nav-button{
+            position: absolute;
+            display: block;
+            width: 100dvw;
+            left: 100px;
+            top: 8px;
+        }
+        .lm{
+            position:absolute;
+            margin: 10px;
+            width: 100px;
+            background-color: transparent;
+            height: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 14pt;
+            font-weight: bold;
+            border: none;
+            vertical-align: middle;
+        }
+        .lmm{
+            left: 110px;
+            position: absolute;
+            margin: 10px;
+            width: 100px;
+            background-color: transparent;
+            height: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 14pt;
+            font-weight: bold;
+            border: none;
+            vertical-align: middle;
+        }
+        .lm:hover{
+            border-bottom: 4px solid rgb(58, 245, 83);
+            border-left: 4px solid rgb(58,246,83);
+            cursor: pointer;
+        }
+        .lmm:hover{
+            border-bottom: 4px solid rgb(58, 245, 83);
+            border-left: 4px solid rgb(58,246,83);
+            cursor: pointer;
+        }
+        .img-section{
+            position: relative;
+            display: block;
+            top: 110px;
+            width: 100dvw;
+            background-color: rgb(249, 255, 255);
+            height: 410px;
+        }
+        .tb{
+            display: table;
+            float: left;
+            margin-top: 10px;
+        }
+        .fb, .tg{
+            width: 50px;
+            padding-right: 15px;
+            height: 50px;
+            background-color: transparent;
+            border: none;
+        }
+        @media (max-width: 768px){
+            .img-section{
+                height: 100dvh;
+            }   
+            .mbl{
+                height: auto;
+            }
+            .sv{
+                margin-top: 5px;
+            }
+            .lm{
+                width: 70px;
+                font-size: 12pt;
+                margin-top: 8px;
+            }
+            .lmm{
+                width: 70px;
+                left: 80px;
+                font-size: 12pt;
+                margin-top: 8px;
+            }
+            .nav{
+                height: 80px;
+                border-bottom: 2px solid skyblue;
+                z-index: 1;
+            }
+        }
+    </style>
+    <script>
+        function svc(){
+           var el = document.getElementsByClassName('img-section');
+           for(i=0;i<el.length;i++){
+            el[i].style.display='none';
+           }
+           var vc = document.getElementsByClassName('mbl');
+           for(j=0;j<vc.length;j++){
+            vc[j].style.display='table';
+           }
+        }
+        function con(){
+           var el = document.getElementsByClassName('img-section');
+           for(i=0;i<el.length;i++){
+            el[i].style.display='block';
+           }
+           var vc = document.getElementsByClassName('mbl');
+           for(j=0;j<vc.length;j++){
+            vc[j].style.display='none';
+           }
+        }
+    </script>
+    <body>
+        <div class="nav">
+            <img id="pf" src="p.png" width="88px" height="72px">
+            <div class="nav-button">
+                <button class="lm" onclick="svc()">Services</button>
+                <button class="lmm" onclick="con()">Contact</button>
+            </div>
+        </div>
+        <div class="img-section">
+        <center>
+                <img src="h.jpg" alt="Mr.Black" width="250px" height="250px" style="margin-left: 20px;margin-top: 20px;border-radius: 15px;">
+                <div class="tx" style="padding-left: 20px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
+                        <h2>Mr.Black</h2>
+                        <p>Remote service for Unlock, Bypass, Global Change, IMEI and Dead Fix.</p>
+                        <p>Contact : <a href="#" onclick="call()" style="text-decoration: none;">09973875024</a></p>
+                        <p>Facebook : <a href="https://www.facebook.com/profile.pho?id=100010515526821&mibextid=ZbWKwL" style="text-decoration: none;">Myo Gyi</a></p>
+                </div>
+        </center>        
+        </div>
+        <div class="mbl">
+            <div class="tb">
+                <div class="xm">
+                    <div class="lg" style="background-color: darkorange;">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 20pt;padding: 10px 0;margin: 0;">Xiaomi</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid darkorange;">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Xiaomi Auth Flash QC/MTK&emsp;</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid darkorange;">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Open Menu Mi Account Remove&emsp;</p>
+                    </div>
+                </div>
+                <div class="xm">
+                    <div class="lg" style="background-color: rgb(71, 168, 248);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 18pt;padding: 10px 0;margin: 0;">Samsung</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid rgb(71, 168, 248);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Samsung KG\MDM Lock&emsp;</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid rgb(71, 168, 248);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Samsung FRP Any Region&emsp;</p>
+                    </div>
+                </div>
+                <div class="xm">
+                    <div class="lg" style="background-color: rgb(7, 74, 161);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 20pt;padding: 10px 0;margin: 0;">Oneplus</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid rgb(7, 74, 161);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Color OS to Oxygen OS&emsp;</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid rgb(7, 74, 161);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Oneplus FRP Any Model&emsp;</p>
+                    </div>
+                </div>
+                <div class="xm">
+                    <div class="lg" style="background-color: rgb(213, 228, 2);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 20pt;padding: 10px 0;margin: 0;">Tecno</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid rgb(213, 228, 2);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;MDM Remove Official&emsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
