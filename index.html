@@ -8,6 +8,7 @@
     <style>
         body{
             margin: 0;
+            ;
         }
         div{
             letter-spacing: normal;
@@ -15,6 +16,9 @@
         .xm{
             display: table;
             margin-top: 20px;
+            animation: bounce;
+            animation-duration: 2s;
+            animation-delay: 2s;
         }
         .nav{
             display: block;
@@ -37,6 +41,8 @@
             width: 100dvw;
             background-color: rgb(249, 255, 255);
             height: 410px;
+            animation: slide 2s forwards;
+            animation-duration: 3s;
         }
         .lg{
             float: left;
@@ -91,6 +97,13 @@
             border-left: 4px solid rgb(58,246,83);
             cursor: pointer;
         }
+        hr{
+            border: none;
+            width: 100dvw;
+            height: 2px;
+            color: rgba(51, 204, 120, 0.842);
+            background-color: rgba(51, 204, 120, 0.842);
+        }
         .lmm:hover{
             border-bottom: 4px solid rgb(58, 245, 83);
             border-left: 4px solid rgb(58,246,83);
@@ -102,7 +115,9 @@
             top: 110px;
             width: 100dvw;
             background-color: rgb(249, 255, 255);
-            height: auto;
+            height: 410px;
+            animation: zoomIn;
+            animation-duration: 2s;
         }
         .tb{
             display: table;
@@ -116,7 +131,27 @@
             background-color: transparent;
             border: none;
         }
-        @media (max-width: 768px){   
+        @keyframes zoomIn{
+            0% {
+                transform: scale(0.1, 0.1);
+                }
+            100% {
+                transform: scale(1, 1);
+                }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+            40% {transform: translateY(-30px);} 
+            60% {transform: translateY(-15px);} 
+        } 
+        @keyframes slide {
+            0% {left: -500px;}
+            100% { left: 0; }
+        }
+        @media (max-width: 768px){
+            .img-section{
+                height: 100dvh;
+            }   
             .mbl{
                 height: auto;
             }
@@ -162,10 +197,13 @@
             vc[j].style.display='none';
            }
         }
+        function call(){
+            window.location.href('tel:09973875024');
+        }
     </script>
     <body>
         <div class="nav">
-            <img id="pf" src="p.PNG" width="88px" height="72px">
+            <img id="pf" src="p.png" width="88px" height="72px">
             <div class="nav-button">
                 <button class="lm" onclick="svc()">Services</button>
                 <button class="lmm" onclick="con()">Contact</button>
@@ -177,7 +215,7 @@
                 <div class="tx" style="padding-left: 20px;font-family: Arial, Helvetica, sans-serif;font-weight: bold;">
                         <h2>Mr.Black</h2>
                         <p>Remote service for Unlock, Bypass, Global Change, IMEI and Dead Fix.</p>
-                        <p>Contact : <a href="#" onclick="call()" style="text-decoration: none;">09973875024</a></p>
+                        <p>Contact : <a href='tel:09973875024' onclick="call()" style="text-decoration: none;">09973875024</a></p>
                         <p>Facebook : <a href="https://www.facebook.com/profile.pho?id=100010515526821&mibextid=ZbWKwL" style="text-decoration: none;">Myo Gyi</a></p>
                 </div>
         </center>        
@@ -195,6 +233,7 @@
                         <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Open Menu Mi Account Remove&emsp;</p>
                     </div>
                 </div>
+                <hr>
                 <div class="xm">
                     <div class="lg" style="background-color: rgb(71, 168, 248);">
                         <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 18pt;padding: 10px 0;margin: 0;">Samsung</p>
@@ -206,6 +245,7 @@
                         <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Samsung FRP Any Region&emsp;</p>
                     </div>
                 </div>
+                <hr>
                 <div class="xm">
                     <div class="lg" style="background-color: rgb(7, 74, 161);">
                         <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 20pt;padding: 10px 0;margin: 0;">Oneplus</p>
@@ -217,14 +257,73 @@
                         <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Oneplus FRP Any Model&emsp;</p>
                     </div>
                 </div>
+                <hr>
                 <div class="xm">
-                    <div class="lg" style="background-color: rgb(213, 228, 2);">
-                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 20pt;padding: 10px 0;margin: 0;">Tecno</p>
+                    <div class="tg" style="background-color: rgb(213, 228, 2);float: left;
+                    margin-left: 10px;
+                    width: auto;
+                    height: 50px;
+                    text-align: center;
+                    border-radius: 10px;
+                    color: white;">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 18pt;padding: 10px 0;margin: 0;">&ensp;Tecno - Infinix - itel</p>
                     </div>
                     <div class="sv" style="border: 2px solid rgb(213, 228, 2);">
                         <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;MDM Remove Official&emsp;</p>
                     </div>
                 </div>
+                <hr>
+                <div class="xm">
+                    <div class="lg" style="background-color: rgb(224, 50, 6);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 20pt;padding: 10px 0;margin: 0;">Huawei</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid  rgb(224, 50, 6);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Huawei ID Lock&emsp;</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid  rgb(224, 50, 6);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Huawei FRP Key&emsp;</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="xm">
+                    <div class="lg" style="background-color: rgb(45, 156, 1);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 20pt;padding: 10px 0;margin: 0;">Oppo</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid  rgb(45, 156, 1);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;MDM\Network Lock&emsp;</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid  rgb(45, 156, 1);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Oppo ID Solution&emsp;</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="xm">
+                    <div class="lg" style="background-color: rgb(0, 132, 209);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 20pt;padding: 10px 0;margin: 0;">Vivo</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid  rgb(0, 132, 209);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;MDM\Network Lock&emsp;</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid  rgb(0, 132, 209);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Vivo Account Lock Solution&emsp;</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="xm">
+                    <div class="lg" style="background-color: rgb(116, 116, 116);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 20pt;padding: 10px 0;margin: 0;">Apple</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid  rgb(116, 116, 116);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;iCloud SIM Bypass&emsp;</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid  rgb(116, 116, 116);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Open Menu FMI Off&emsp;</p>
+                    </div>
+                    <div class="sv" style="border: 2px solid  rgb(116, 116, 116);">
+                        <p style="font-weight: bold;font-family: Arial, Helvetica, sans-serif;font-size: 14pt;padding: 15px 0;margin: 0;">&emsp;Apple ID Not Active&emsp;</p>
+                    </div>
+                </div>
+                <hr>
             </div>
         </div>
     </body>
